@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>lib.arul.batterymanager</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/shortcuts</string>
+        <string>run</string>
+        <string>BatteryManager</string>
+    </array>
+    <!-- Run every 180 seconds (3 minutes) -->
+    <key>StartInterval</key>
+    <integer>180</integer>
+    <!-- Optionally run immediately upon loading -->
+    <key>RunAtLoad</key>
+    <true/>
+    <!-- Redirect output (optional) -->
+    <key>StandardOutPath</key>
+    <string>/tmp/batterymanager.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/batterymanager.err</string>
+</dict>
+</plist>
