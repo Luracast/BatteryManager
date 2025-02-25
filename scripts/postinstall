@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Get the currently logged-in user (console user)
+CURRENT_USER=$(stat -f %Su /dev/console)
+USER_HOME=$(dscl . -read /Users/"$CURRENT_USER" NFSHomeDirectory | awk '{print $2}')
+DESTINATION="$USER_HOME/Desktop"
+
+mkdir -p "$USER_HOME/Library/LaunchAgents"
+cp "${PWD}/lib.arul.batterymanager.plist" "$USER_HOME/Library/LaunchAgents/"
+launchctl load "$USER_HOME/Library/LaunchAgents/lib.arul.batterymanager.plist"
+cp "${PWD}/BatteryManager.shortcut" "$DESTINATION/"
+sudo chown "$CURRENT_USER":staff "$DESTINATION/BatteryManager.shortcut"
+sudo xattr -c "$DESTINATION/BatteryManager.shortcut" 2>/dev/null
+open "$DESTINATION/BatteryManager.shortcut"
+exit 0
