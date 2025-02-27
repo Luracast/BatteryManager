@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Label</key>
-    <string>lib.arul.batterymanager</string>
+    <string>com.luracast.batterymanager</string>
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/shortcuts</string>

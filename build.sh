@@ -9,7 +9,7 @@ mkdir -p "$SCRIPTS_DIR"
 shortcuts sign -m anyone -i "$SRC_DIR/$UNSIGNED_FILE" -o "$SCRIPTS_DIR/$SIGNED_FILE"
 
 pkgbuild --nopayload \
-         --identifier lib.arul.batterymanager \
+         --identifier com.luracast.batterymanager \
          --version 1.0 \
          --scripts scripts \
-         BatteryManagerInstaller.pkg
+         BatteryManager.pkg

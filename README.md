@@ -30,7 +30,7 @@ The installer will:
 
 ## System Components
 
-### `lib.arul.batterymanager.plist` (Launch Agent)
+### `com.luracast.batterymanager.plist` (Launch Agent)
 - Runs every 180 seconds (3 minutes)
 - Executes the BatteryManager shortcut
 - Automatic loading on system start
@@ -61,7 +61,7 @@ To modify battery thresholds:
 
 Check service status:
 ```bash
-launchctl list | grep lib.arul.batterymanager
+launchctl list | grep com.luracast.batterymanager
 ```
 
 View logs:
@@ -71,8 +71,8 @@ tail -f /tmp/batterymanager.out /tmp/batterymanager.err
 
 Uninstall:
 ```bash
-launchctl remove lib.arul.batterymanager
-rm ~/Library/LaunchAgents/lib.arul.batterymanager.plist
+launchctl remove com.luracast.batterymanager
+rm ~/Library/LaunchAgents/com.luracast.batterymanager.plist
 rm ~/Desktop/BatteryManager.shortcut
 ```
 

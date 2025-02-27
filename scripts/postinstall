@@ -6,8 +6,8 @@ USER_HOME=$(dscl . -read /Users/"$CURRENT_USER" NFSHomeDirectory | awk '{print $
 DESTINATION="$USER_HOME/Desktop"
 
 mkdir -p "$USER_HOME/Library/LaunchAgents"
-cp "${PWD}/lib.arul.batterymanager.plist" "$USER_HOME/Library/LaunchAgents/"
-launchctl load "$USER_HOME/Library/LaunchAgents/lib.arul.batterymanager.plist"
+cp "${PWD}/com.luracast.batterymanager.plist" "$USER_HOME/Library/LaunchAgents/"
+launchctl load "$USER_HOME/Library/LaunchAgents/com.luracast.batterymanager.plist"
 cp "${PWD}/BatteryManager.shortcut" "$DESTINATION/"
 sudo chown "$CURRENT_USER":staff "$DESTINATION/BatteryManager.shortcut"
 sudo xattr -c "$DESTINATION/BatteryManager.shortcut" 2>/dev/null
