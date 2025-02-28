@@ -1,3 +1,3 @@
 .DS_Store
-BatteryManagerInstaller.pkg
+*.pkg
 scripts/BatteryManager.shortcut
